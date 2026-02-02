@@ -26,7 +26,7 @@ def main(args: DictConfig):
         # retest the output
         out = args.strategy.name + str(args.seed) + '.wav'
         sf.write(out, wave, args.sr)
-        print(model.asr.model.transcribe_file(out))
+        print(model.asr.transcribe(wave))
 
         if args.out:
             model.eval_attack(wave)
