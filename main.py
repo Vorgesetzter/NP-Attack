@@ -7,7 +7,7 @@ from omegaconf import DictConfig, OmegaConf
 from models.attacker import NPAttacker
 
 # Override the input wave file here (set to None to use config default)
-_WAVE_FILE = "ground_truth.wa   v"  # e.g., "data/my_audio.wav" or "/absolute/path/to/file.flac"
+_WAVE_FILE = "ground_truth.wav"  # e.g., "data/my_audio.wav" or "/absolute/path/to/file.flac"
 # Convert to absolute path before Hydra changes working directory
 WAVE_FILE = os.path.abspath(_WAVE_FILE) if _WAVE_FILE is not None else None
 
